@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Food Recipe App Design System - Warm, appetizing colors */
+
+@layer base {
+  :root {
+    --background: 30 25% 98%;
+    --foreground: 20 20% 15%;
+
+    --card: 30 30% 99%;
+    --card-foreground: 20 20% 15%;
+
+    --popover: 30 30% 99%;
+    --popover-foreground: 20 20% 15%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 80% 95%;
+    --secondary-foreground: 20 20% 20%;
+
+    --muted: 30 15% 94%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 142 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 24 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom food app tokens */
+    --warm: 35 90% 55%;
+    --warm-foreground: 0 0% 100%;
+    --spice: 15 85% 50%;
+    --spice-foreground: 0 0% 100%;
+    --herb: 142 50% 40%;
+    --herb-foreground: 0 0% 100%;
+    --cream: 45 50% 96%;
+
+    --sidebar-background: 30 20% 97%;
+    --sidebar-foreground: 20 15% 30%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 60% 94%;
+    --sidebar-accent-foreground: 20 15% 20%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 24 95% 53%;
+  }
+
+  .dark {
+    --background: 20 20% 8%;
+    --foreground: 30 20% 95%;
+
+    --card: 20 18% 12%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 20 18% 12%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 24 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 15% 18%;
+    --secondary-foreground: 30 20% 90%;
+
+    --muted: 20 12% 20%;
+    --muted-foreground: 30 10% 60%;
+
+    --accent: 142 55% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 12% 22%;
+    --input: 20 12% 22%;
+    --ring: 24 95% 55%;
+
+    --warm: 35 85% 50%;
+    --warm-foreground: 0 0% 100%;
+    --spice: 15 80% 45%;
+    --spice-foreground: 0 0% 100%;
+    --herb: 142 45% 35%;
+    --herb-foreground: 0 0% 100%;
+    --cream: 20 15% 15%;
+
+    --sidebar-background: 20 18% 10%;
+    --sidebar-foreground: 30 15% 90%;
+    --sidebar-primary: 24 95% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 12% 18%;
+    --sidebar-accent-foreground: 30 15% 90%;
+    --sidebar-border: 20 12% 18%;
+    --sidebar-ring: 24 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-md;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-warm bg-clip-text text-transparent;
+  }
+}
